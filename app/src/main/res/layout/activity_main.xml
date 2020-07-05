@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Linear Search:"
+        android:id="@+id/txtTitle"
+        android:textSize="23sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:padding="6dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:text="@string/txtBinarySearch"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:id="@+id/txtDescription"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="10"
+        android:layout_below="@+id/txtDescription"
+        android:layout_marginTop="50dp"
+        android:id="@+id/llContent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a number to Search:"
+        android:layout_below="@id/llContent"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:padding="5dp"
+        android:id="@+id/txtNumber"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtNumber"
+        android:textSize="20sp"
+        android:layout_below="@id/llContent"
+        android:padding="5dp"
+        android:inputType="number"
+        android:hint="Enter Here"
+        android:textColorHint="#fff"
+        android:maxLength="2"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:id="@+id/eEnterNumber"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNumber"
+        android:layout_marginTop="40dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result: "
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:padding="6dp"
+        android:id="@+id/txtResult"/>
+
+        <TextView
+            android:id="@+id/txtFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnSearch"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"/>
+</RelativeLayout>
